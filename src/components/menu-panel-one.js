@@ -17,7 +17,7 @@ function MenuItem(props){
 }
 
 function checkDescription(description){
-	if(description.length > 1  ){
+	if(description.length > 1 ){
 		console.log(description.length)
 		return true
 	} else {

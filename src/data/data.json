@@ -1,0 +1,30 @@
+{
+"Categorys":[
+	{
+	"categoryName":"Fudds Favs",
+	"categoryHero":{
+			"itemName": "burger one",
+		   	"itemDescript":"Grilled or blacked",
+			"itemPrice":6.00, 
+			"itemCals":1000, 
+			"favItem":true,
+	},
+	"items":[
+		   {
+		   	"itemName": "burger one",
+		   	"itemDescript":"Grilled or blacked",
+			"itemPrice":6.00, 
+			"itemCals":1000, 
+			"favItem":true 
+			}
+	 	]
+
+	}
+
+
+
+]
+
+
+
+}
