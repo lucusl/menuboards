@@ -1,0 +1,39 @@
+h3 {
+	font-family: "Bootstrap";
+	font-size: 2.5em;
+	margin: 0;
+	color: #b20202;
+}
+
+h3.price {
+	font-family: "Veneer";
+}
+
+p.description {
+   margin-top: 0px;	
+}
+
+.item-sction-container{
+	display: flex;
+	flex-direction: column;
+	margin: 0 10vw 0 10vw
+}
+
+.item-container{
+	display: flex;
+	flex-direction: row;
+}
+
+.pad{
+	padding-bottom: 20px;
+}
+.item-container p{
+ 	flex-grow: 100;
+ 	border-bottom: 3px dotted #000;
+ 	border-color: #b7b7b7;
+	text-decoration: none;	
+	height: 2em;
+  	margin: 0 15px 0 15px;
+}
+
+
