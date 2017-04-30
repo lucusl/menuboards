@@ -2,7 +2,7 @@ h3 {
 	font-family: "Bootstrap";
 	font-size: 2.5em;
 	margin: 0;
-	color: #b20202;
+	color: #ce1141;
 }
 
 h3.price {
@@ -13,21 +13,30 @@ p.description {
    margin-top: 0px;	
 }
 
-
+.heading1 .a {
+	fill: red;
+}
 
 .menu-container{
-	
+	background-image: url('../assets/images/BG.jpg');
+	background-size: cover;
+	height: 100VH;
+	padding:0 10vw 0 10vw;
 }
 
 .item-sction-container{
 	display: flex;
 	flex-direction: column;
-	margin: 0 10vw 0 10vw
+	margin: 0;
 }
 
 .item-container{
 	display: flex;
 	flex-direction: row;
+}
+
+.hero-container{
+	display: flex;
 }
 
 .pad{

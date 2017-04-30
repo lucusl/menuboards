@@ -1,41 +1,85 @@
 import React, { Component } from 'react';
 import '../styles/menu.styles.css';
+import heading1 from '../assets/images/fud-fav-heading.svg'
+import json from '../data/data.json'
+import MenuItem from '../components/menu-item-simple'
 
-function MenuItem(props){
-	let isDescription = checkDescription(props.descrpt);
-	return(
-		<div className= {"item-sction-container " + (!isDescription ? 'pad' :'') }> 
-			<div className="item-container" >
+
+const api = require('../utils/api')
+const data = json;
+
+
+
+
+
+function MenuHero(props){
+	return (
+		<section className='hero-container'>
+			<div>image</div>
+			<div>
 				<h3>{props.itemName}</h3>
-				<p>  </p>
+				<p className="description"> {props.descrpt} </p>
 				<h3 className="price">{props.price}</h3>
 			</div>
-			{  isDescription ? <p className="description"> {props.descrpt} </p> : '' }
-		</div>
+		</section>
+
+
 		)
-
 }
-
-function checkDescription(description){
-	if(description.length > 1 ){
-		console.log(description.length)
-		return true
-	} else {
-		console.log(description.length)
-		return false
-	}
-}
-
 
 
 
 class MenuPanOne extends Component {
+constructor(props){
+	super(props);
+
+	this.state = {
+		categorys: "",	
+	};
+
+	this.getMenuData = this.getMenuData.bind(this);
+
+}
+
+componentWillMount() {
+		this.getMenuData();
+}
+
+
+getMenuData() {
+	        this.setState( function (){
+			return {
+				categorys: data.Categorys
+			}
+		})
+
+}
+
   render() {
+
+  	let category = this.state.categorys[0].FuddsFavs;
+  	let items = category.items;
+  	let hero = category.categoryHero;
+  	console.log(hero.name)
+
     return (
-    <div className="menu-container">	
-    	<MenuItem itemName="Veggie Burger" descrpt="" price="7.90" Cals=" " /> 
-       	<MenuItem itemName="Veggie Burger" descrpt="this is a description" price="7.90" Cals=" " /> 
-    	<MenuItem itemName="Veggie Burger" descrpt="this is a description" price="7.90" Cals=" " /> 
+    <div className="menu-container">
+    	<div className="category-container">
+
+			<object type="image/svg+xml" data= {heading1} className="heading1">
+			  Fudds favs  
+			</object>
+
+			<MenuHero itemName={hero.name} descrpt={hero.desc} price={hero.price}  />
+
+			{items.map((item) =>{
+				return (
+					<MenuItem key={items.indexOf(item)}itemName={item.name} descrpt={item.desc} price={item.price} Cals=" " /> 
+
+					)
+				})}
+	   
+    	</div>
     </div>
     );
   }

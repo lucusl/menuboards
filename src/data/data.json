@@ -1,27 +1,82 @@
 {
 "Categorys":[
-	{
-	"categoryName":"Fudds Favs",
+
+	{ 
+	"FuddsFavs":{
+		"categoryName":"Fudds Favs",
+		"catergoryDesc":"Antibiotic free, hormone free, free range, pasture raised, 100% all-natural",
+		"categoryId":1,
+		"categoryHero":{
+		   		"name": "burger one",
+			   	"desc":"Grilled or blacked",
+				"price":"6.00", 
+				"cals":"1000", 
+				"favItem":false,
+				"newItem":false,
+				"imageUrl":"url"
+		},
+		"items":[
+			   {
+			   	"name": "Burger One",
+			   	"desc":"Grilled or blacked",
+				"price":"6.00", 
+				"cals":1000, 
+				"favItem":false,
+				"newItem":false
+				},
+				{
+			   	"name": "Burger Two",
+			   	"desc":"Grilled or blacked",
+				"price":"6.00", 
+				"cals":"1000", 
+				"favItem":false,
+				"newItem":false
+				},
+				{
+				   	"name": "Burger Three",
+				   	"desc":"",
+					"price":"6.00", 
+					"cals":"1000", 
+					"favItem":false,
+					"newItem":false
+				}
+		 	]
+		}
+	},
+
+	{ "Specialty burgers":{
+	"categoryName":"Specialty burgers",
+	"categoryId":1,
 	"categoryHero":{
-			"itemName": "burger one",
-		   	"itemDescript":"Grilled or blacked",
-			"itemPrice":6.00, 
-			"itemCals":1000, 
-			"favItem":true,
+		   		"name": "Burger One",
+			   	"desc":"Grilled or blacked",
+				"price":"6.00", 
+				"cals":"1000", 
+				"favItem":false,
+				"newItem":false
 	},
 	"items":[
 		   {
-		   	"itemName": "burger one",
-		   	"itemDescript":"Grilled or blacked",
-			"itemPrice":6.00, 
-			"itemCals":1000, 
-			"favItem":true 
+		   		"name": "Burger One",
+			   	"desc":"Grilled or blacked",
+				"price":"6.00", 
+				"cals":"1000", 
+				"favItem":false,
+				"newItem":false
+			},
+			{
+			   	"name": "Burger Three",
+			   	"desc":"",
+				"price":"6.00", 
+				"cals":"1000", 
+				"favItem":false,
+				"newItem":false
 			}
+
 	 	]
 
 	}
-
-
+}
 
 ]
 
